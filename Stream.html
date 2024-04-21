@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery.js"></script>
+
+</head>
+
+<body>
+
+    <!-- loader -->
+    <nav class="navbar navbar-expand-lg bg-body-black">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars text-white fs-1 border-2 border-danger"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0 nav-index">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white fs-5 fw-bold" aria-current="page"
+                            href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white fs-5 fw-bold" aria-current="page" href="Stream.html">Live
+                            Stream</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white fs-5 fw-bold" aria-current="page" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white fs-5 fw-bold" aria-current="page" href="#">Shop</a>
+                    </li>
+                </ul>
+                <div>
+                    <a href="user.html" class="login-btn">
+                        <i class="fa-solid fa-right-to-bracket"></i><span>Login</span></a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+    <div class="center-loader">
+        <div class="loader" id="loader">
+            <!-- <img src="img/loader.gif" alt=""> -->
+        </div>
+    </div>
+    <!-- banner  -->
+    <div class=" streampage position-relative">
+        <img src="img/bg.png" alt="">
+        <h1>Live Stream Pages</h1>
+    </div> `
+
+    <!-- poppular movie section -->
+    <section class="py-5 container">
+        <!-- card start slider -->
+        <div class="container">
+            <div class="  row row-cols-lg-4 row-cols-md-2 row-cols-1"
+                id="card-container-live-stream">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="container-fluid d-flex justify-content-around align-items-center p-3">
+        <div class="left">
+            <img src="img/logo.png" class="mb-4" alt="">
+            <p>Email Us: customer@streamit.com</p>
+            <p>CUSTOMER SERVICES</p>
+            <p>+(480)555-093</p>
+        </div>
+        <div class="midden">
+            <h5 class="mb-4 text-white">Quick Links</h5>
+            <p>About Us</p>
+            <p>Blog</p>
+            <p>Pricing Plan</p>
+            <p>FAQ</p>
+        </div>
+        <div class="right">
+            <h5 class="mb-4 text-white">Movies To Watch</h5>
+            <p>Top Tending</p>
+            <p>Recmmended</p>
+            <p>Poppular</p>
+        </div>
+    </footer>
+
+
+    <!-- <div class="container">
+        <div class="row row-cols-4 card-slider d-flex"  id="card-container-upload-video">
+        </div>
+        <div class="row row-cols-3" id="card-container-live-stream"></div>
+    </div> -->
+
+
+    <script>
+    //     function livestreamloadajax() {
+    //         $.ajax({
+    //             type: "GET",
+    //             url: "http://localhost/admin-panel/Data/data.json",
+    //             dataType: "json",
+    //             success: function (response) {
+    //                 // console.log(response.livestreamArray);
+    //                 displaylivestream(response.livestreamArray);
+    //             },
+    //             error: function (error) {
+    //                 console.log(error)
+    //             }
+    //         });
+    //     }
+
+    //     function displaylivestream(livestreamcard) {
+    //         console.log(livestreamcard)
+    //         let cardlist = '';
+    //         livestreamcard.forEach((viditem, index) => {
+    //             // console.log('card list', viditem.liveimg);
+    //             cardlist += `
+    //         <div class="col position-relative" ${index}>
+    //       <a href="#" onclick="changevideo('${viditem.liveUrl}','application/x-mpegURL')" >
+    //       <div class="" style="width: 18rem;">
+    //       <img src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/WhatCarCanYouGetForAGrand.jpg" class="card-img-top" alt="...">
+    //       <h4 class="text-white">${viditem.liveTitle}</h4>
+    //   </div>
+    //       </a>
+    //         <h6 class="text-white bg-danger position-absolute top-0 ms-3 mt-5 fw-bold  p-1 rounded">Live ${index + 1}</h6>
+    //     </div>
+    //             `;
+    //         });
+    //         if (livestreamcard.length != 0) {
+    //             // uploadtableBody.innerHTML = html;
+    //             $('#card-container-live-stream').html(cardlist);
+    //         } else {
+    //             // uploadtableBody.innerHTML = 'upload video 0'
+    //             $('#card-container-live-stream').html('live stream  Video Is Not Found');
+    //         }
+    //     }
+
+
+
+    //     $(document).ready(function () {
+    //         livestreamloadajax();
+    //     });
+
+    </script>
+    <script src="js/ajax.js"></script>
+    <script src="./js/loader.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>

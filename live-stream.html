@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery.min.js"></script>
+
+</head>
+
+<body onLoad="livestreamPageLoad()">
+
+    <!-- mobile navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-black admin-nav-mobile">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars text-white fs-1 border-2 border-danger"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0 nav-index">
+                <li class="nav-item">
+                    <a class="nav-link active text-white fs-5 fw-bold" aria-current="page" href="dashboard.html">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-white fs-5 fw-bold" aria-current="page" href="live-stream.html">Live Stream List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-white fs-5 fw-bold" aria-current="page" href="uploadvideo.html">Video List</a>
+                </li>
+            </ul>
+            <div>
+                <a href="index.html" class="login-btn">
+                    <i class="fa-solid fa-right-to-bracket"></i> <span>Logout</span></a>
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    <!-- desktop navbar -->
+    <div class="d-flex" id="admin-panel">
+        <div class="" id="sidebar">
+            <!-- <img src="img/logo.png" class="" style="width: 10rem;" alt=""> -->
+            <ul class="admin-nav" id="navbar-list">
+               <li class="list" > <a href="dashboard.html" class=" cursor"><span class="icon"><i class="fa-solid fa-house-chimney"></i></span><span class="title"> Dashboard</span></a></li>
+               <li class="list active"> <a href="live-stream.html" class=" cursor"><span class="icon"><i class="fa-solid fa-tower-broadcast"></i></span><span class="title"> Live Streams</span></a></li>
+               <li class="list"> <a href="uploadvideo.html" class=" cursor"><span class="icon"><i class="fa-solid fa-play"></i></span><span class="title"> Videos</span></a></li>
+               <li class="list"> <a href="index.html" class=" cursor"><span class="icon"><i class="fa-solid fa-right-from-bracket"></i></span><span class="title"> Logout</span></a></li>
+
+            </ul>
+        </div>
+        <!-- main -->
+        <div class="main-content-div" id="main-content">
+            <div class="center-loader">
+                <div class="loader" id="loader">
+                    <!-- <img src="img/loader.gif" alt=""> -->
+                </div>
+            </div>
+          
+            <!-- live stream -->
+            <div class="livestream-container" id="live-stream">
+                <!-- navbar live stream -->
+                <div class="add-livestream-div">
+                    <h2 class="">Live Stream</h2>
+                    <!-- <li class="nav-item"></li> -->
+                    <button id="add-livestream-btn" class=""><i class="fa-solid fa-plus"></i> <span>Add Live
+                        Stream</span></button>
+                </div>
+                <!-- table live stream -->
+                <div class="table-mobile">
+                    <table class="container-fluid  live-stream-table-div" id="livestream-table">
+                        <thead>
+                            <tr class="">
+                                <th class=" text-center">#</th>
+                                <th class=" text-center">TITLE</th>
+                                <th class=" text-center livestream-url">URL</th>
+                                <th class=" text-center">ACTION</th>
+                            </tr>
+                        </thead>
+                        <tbody id="live-stream-tbody">
+                            <!-- table tbody -->
+    
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- form -->
+                <form action="" id="add-livestream-form" class="live-stream-form-class">
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="live-stream-title" placeholder="Enter Title">
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea class="form-control" id="live-stream-description" placeholder="Enter Description"
+                            cols="5" rows="5"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="url" class="form-label">Image URL</label>
+                        <input type="text" class="form-control" id="live-stream-imgurl" placeholder="Enter URL">
+                    </div>
+                    <div class="mb-3">
+                        <label for="url" class="form-label">URL</label>
+                        <input type="text" class="form-control" id="live-stream-url" placeholder="Enter URL">
+                    </div>
+                    <input type="submit" id="livebtn" value="Stream Add" class="button">
+                    <input type="hidden"  value="Save" class="">
+                </form>
+
+
+            </div>
+            <!-- end live stream -->
+
+        </div>
+    </div>
+    
+
+    <script>
+        let list = document.querySelectorAll('.list');
+        for (let i = 0; i < list.length; i++) {
+            list[i].onclick= function(){
+                let j=0
+                while (j<list.length) {
+                    list[j++].className = 'list';
+                }
+                list[i].className = 'list active';
+            }
+            
+        }
+    </script>
+    <script src="./js/js.js"></script>
+    <script src="./js/live-stream.js"></script>
+    <script src="./js/all.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="js/loader.js"></script>
+</body>
+
+</html>

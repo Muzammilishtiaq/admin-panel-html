@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery.min.js"></script>
+
+</head>
+
+<body onload="onloginPageload()">
+    <div class="center-loader">
+        <div class="loader" id="loader">
+            <!-- <img src="img/loader.gif" alt=""> -->
+        </div>
+    </div>
+    <!-- loader -->
+<div class="container-fluid position-relative p-0 ">
+<img src="img/bg.png" alt=""  style="height: 100vh;width: 100%;">
+
+
+    <div class="form-logo-container" >
+        <img src="img/logo.png" alt="" class="">
+        <!-- register form -->
+        <div class=" " id="register-form" style="display: none;">
+            <h1 class="mb-4 fw-bold">Register</h1>
+            <form action="" id="register">
+                <div class="mb-3">
+                    <label for="firstname" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstname" placeholder="First Name">
+                </div>
+                <div class="mb-3">
+                    <label for="lastname" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastname" placeholder="Last Name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" maxlength="4" class="form-control" id="password" placeholder="Password">
+                </div>
+                <div class="mb-3">
+                    <input type="submit" class="button" value="Register">
+                </div>
+            </form>
+            <p>Account Already? <a href="#" id="login-link" class="" style="text-decoration: none;color: red;">Login</a>
+            </p>
+        </div>
+
+        <!-- login form -->
+        <div class="" id="login-form">
+            <h1 class="mb-4 fw-bold">LOGIN</h1>
+            <form action="" id="login">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="logemail" placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="logpassword" placeholder="Password">
+                </div>
+                <div class="mb-3">
+                    <input type="submit" class="button" value="Login">
+                </div>
+            </form>
+            <p>Account Not? <a href="#" id="register-link" class=""
+                    style="text-decoration: none;color: red;">Register</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/loader.js"></script>
+    <script src="./js/js.js"></script>
+    <script src="./js/all.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery.js"></script>
+</body>
+
+</html>

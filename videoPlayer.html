@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://vjs.zencdn.net/8.6.1/video-js.css" rel="stylesheet" />
+  <link href="https://unpkg.com/@videojs/themes@1/dist/sea/index.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="css/all.min.css">
+</head>
+
+<body onload="videoplayerpageload()">
+
+<!-- loader -->
+    <!-- navbar start -->
+
+  <!-- navbar end -->
+  <div class="center-loader">
+    <div class="loader" id="loader">
+        <!-- <img src="img/loader.gif" alt=""> -->
+    </div>
+</div>
+<div class=" video-player">
+  <video id="my-video" class="video-js"  controls preload="auto"
+  data-setup="{}">
+  <source src= "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+  <!-- <p class="vjs-no-js">
+    To view this video please enable JavaScript, and consider upgrading to a
+    web browser that
+    <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+  </p> -->
+</video>
+</div>
+
+<script src="js/loader.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="js/all.min.js"></script>
+  <script src="./js/jquery.js"></script>
+  <script src="./js/uploadvideo.js"></script>
+  <script src="./js/live-stream.js"></script>
+  <script src="https://vjs.zencdn.net/8.6.1/video.min.js"></script>
+</body>
+
+</html>

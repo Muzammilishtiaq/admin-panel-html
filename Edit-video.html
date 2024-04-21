@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery.min.js"></script>
+
+</head>
+
+<body onload="onEditvideoPageLoad()">
+
+    <div class="d-flex" id="admin-panel">
+        <div class="" id="sidebar">
+            <!-- <img src="img/logo.png" class="" style="width: 10rem;" alt=""> -->
+            <ul class="admin-nav" id="navbar-list">
+               <li class="list" > <a href="dashboard.html" class=" cursor"><span class="icon"><i class="fa-solid fa-house-chimney"></i></span><span class="title"> Dashboard</span></a></li>
+               <li class="list"> <a href="live-stream.html" class=" cursor"><span class="icon"><i class="fa-solid fa-tower-broadcast"></i></span><span class="title"> Live Streams</span></a></li>
+               <li class="list active"> <a href="uploadvideo.html" class=" cursor"><span class="icon"><i class="fa-solid fa-play"></i></span><span class="title"> Videos</span></a></li>
+               <li class="list"> <a href="index.html" class=" cursor"><span class="icon"><i class="fa-solid fa-right-from-bracket"></i></span><span class="title"> Logout</span></a></li>
+
+            </ul>
+        </div>
+        <!-- main -->
+        <div class="uploadvideo-main-content-div" id="main-content">
+            <div class="center-loader">
+                <div class="loader" id="loader">
+                    <!-- <img src="img/loader.gif" alt=""> -->
+                </div>
+            </div>
+            <!-- edit video  -->
+            <div class="" id="edit-video">
+                <!-- navbar video-->
+                <div class="add-uploadvideo-div">
+                    <h2 class="">Edit Video</h2>
+                </div>
+                <!-- form -->
+                <form action="" id="edit-video-form" class="uploadvideo-form-div">
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="edit-video-title" placeholder="Enter Title">
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea class="form-control" id="edit-video-description" placeholder="Enter Description"
+                            cols="5" rows="5"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="url" class="form-label">IMAGE URL</label>
+                        <input type="text" class="form-control" id="edit-img-video-url" placeholder="Enter Image Url">
+                    </div>
+                    <div class="mb-3">
+                        <label for="url" class="form-label">URL</label>
+                        <input type="text" class="form-control" id="edit-video-url" placeholder="Enter URL">
+                    </div>
+                    <input type="submit" value="Update" class="button">
+                </form>
+
+
+            </div>
+            <!-- end live stream -->
+
+        </div>
+    </div>
+    
+
+<script src="js/loader.js"></script>
+    <script src="./js/js.js"></script>
+    <script src="./js/uploadvideo.js"></script>
+    <script src="./js/all.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery.js"></script>
+</body>
+
+</html>
